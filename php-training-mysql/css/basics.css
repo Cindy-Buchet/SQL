@@ -1,0 +1,28 @@
+label, select, input{
+  width: 150px;
+  display: inline-block;
+  margin: 5px 0;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+td{
+    padding: 5px;
+    width: 100px;
+}
+h2{
+    margin-top: 50px !important;
+}
+
+.valider{
+  margin-bottom: 30px;
+}
+
+.gif-valide{
+  width: 40px;
+  height: 40px;
+}
+.invisible{
+  display: hidden;
+}
