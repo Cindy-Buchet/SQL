@@ -6,7 +6,25 @@
 	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
+<?php
+	// On démarre la session (ceci est indispensable dans toutes les pages de notre section membre)
+	session_start ();
 
+	// On récupère nos variables de session
+	if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
+
+		// On teste pour voir si nos variables ont bien été enregistrées
+		
+		echo 'Votre login est '.$_SESSION['login'].' et votre mot de passe est '.$_SESSION['pwd'].'.';
+
+		// On affiche un lien pour fermer notre session
+		echo '<a href="./logout.php">Déconnection</a>';
+	}
+	else {
+		echo 'Les variables ne sont pas déclarées.';
+	}
+
+?>
 	<a href="/SQL/php-training-mysql/read.php">Liste des données</a>
 	<h1>Ajouter</h1>
 	<form action="" method="post">
